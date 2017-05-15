@@ -56,6 +56,13 @@ echo "if that does not work: git push -f origin master"
 echo "@info usefull commands:"
 echo "git status"
 echo "git remote -v -> list all currently configured remote repos"
+echo "git fetch origin"
+echo "git reset --hard origin/master -> download latest history."
+echo "git add *"
+echo "git commit -a"
+echo "git push origin master"
+echo "git branch -> list all branches in your repo"
+echo "git push origin <branch name>"
 echo "Do this? (y/n); type y for yes, n for no"
 read ANSWER
 if [ "$ANSWER" == "y" ]
