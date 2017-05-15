@@ -52,10 +52,6 @@ echo "git add README.md"
 echo "git commit -m \"commit name\" "
 echo "git remote add origin https://github.com/CesMak/repository_name"
 echo "git push -u origin master"
-echo "if that does not work: git push -f origin master"
-echo "@info usefull commands:"
-echo "git status"
-echo "git remote -v -> list all currently configured remote repos"
 echo "Do this? (y/n); type y for yes, n for no"
 read ANSWER
 if [ "$ANSWER" == "y" ]
