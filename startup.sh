@@ -39,7 +39,8 @@ if [ "$ANSWER" == "y" ]
 fi
 
 echo " "
-echo "@install git?"
+echo "@install git and gitk?"
+echo "@usage gitk"
 echo "@info: Setup git:"
 echo "git config --global user.name \"Your Name\""
 echo "git config --global user.email \"youremail@domain.com\" "
@@ -68,6 +69,8 @@ read ANSWER
 if [ "$ANSWER" == "y" ]
     then
 	sudo apt-get install git
+	sudo apt-get update
+	sudo apt-get install gitk
     else
         echo "nothing installed or updated etc."
 fi
@@ -211,6 +214,7 @@ echo "Do this? (y/n); type y for yes, n for no"
 read ANSWER
 if [ "$ANSWER" == "y" ]
     then
+
 	sudo apt-add-repository -y 'ppa:atareao/telegram'; sudo apt-get update; sudo apt-get -y install telegram 
 fi
 
@@ -222,4 +226,27 @@ read ANSWER
 if [ "$ANSWER" == "y" ]
     then
 	sudo apt-get install shutter
+fi
+
+echo " "
+echo "@install gimp?"
+echo "@info  a programm to edit pictures "
+echo "@usage Windows->Single Window Mode "
+echo "Do this? (y/n); type y for yes, n for no"
+read ANSWER
+if [ "$ANSWER" == "y" ]
+    then
+	sudo apt-get install gimp
+	gimp
+fi
+
+echo " "
+echo "@install kazam?"
+echo "@info  a programm to capture your screen "
+echo "Do this? (y/n); type y for yes, n for no"
+read ANSWER
+if [ "$ANSWER" == "y" ]
+    then
+	sudo apt-get install kazam
+	kazam
 fi
