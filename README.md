@@ -1,6 +1,6 @@
 This is a simple bash script that can be used to easily configure your ubuntu.
 
-#Features:
+# Features:
 It will install many programms which are important for coding like:
 tree
 git
