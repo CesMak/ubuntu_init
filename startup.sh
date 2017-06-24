@@ -175,7 +175,7 @@ fi
 
 
 echo " "
-echo "@install qt creator plugin for ROS?"
+echo "@install qt creator plugin ROS INDIGO for ROS?"
 echo "@usage  New project import ROs project workspace!"
 echo "@usage Tools Options fonts and colors set to dark ros."
 echo "Do this? (y/n); type y for yes, n for no"
@@ -189,6 +189,19 @@ if [ "$ANSWER" == "y" ]
         echo "nothing installed or updated etc."
 fi
 
+echo " "
+echo "@install qt creator plugin ROS KINETIC for ROS?"
+echo "@usage  New project import ROs project workspace!"
+echo "Do this? (y/n); type y for yes, n for no"
+read ANSWER
+if [ "$ANSWER" == "y" ]
+    then
+	sudo add-apt-repository ppa:levi-armstrong/qt-libraries-xenial  
+sudo add-apt-repository ppa:levi-armstrong/ppa  
+sudo apt-get update && sudo apt-get install qt57creator-plugin-ros
+    else
+        echo "nothing installed or updated etc."
+fi
 
 echo " "
 echo "@configure setup SSH - Keys"
@@ -275,3 +288,15 @@ if [ "$ANSWER" == "y" ]
 	sudo apt-get install kazam
 	kazam
 fi
+
+echo " "
+echo "@install filezilla?"
+echo "@info  a programm to capture your screen "
+echo "Do this? (y/n); type y for yes, n for no"
+read ANSWER
+if [ "$ANSWER" == "y" ]
+    then
+	sudo apt-get install filezilla 
+	filezilla
+fi
+
