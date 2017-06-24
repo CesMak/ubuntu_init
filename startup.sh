@@ -128,7 +128,7 @@ if [ "$ANSWER" == "y" ]
 fi
 
 echo " "
-echo "@install ros indigo full desktop"
+echo "@install ros indigo full desktop on ubuntu 14.04. LTS"
 echo "Do this? (y/n); type y for yes, n for no"
 read ANSWER
 if [ "$ANSWER" == "y" ]
@@ -148,6 +148,31 @@ sudo apt-get install ros-indigo-desktop-full
     else
         echo "nothing installed or updated etc."
 fi
+
+
+
+echo " "
+echo "@install ros kinetic full desktop on ubuntu 16.02 LTS"
+echo "Do this? (y/n); type y for yes, n for no"
+read ANSWER
+if [ "$ANSWER" == "y" ]
+    then
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+sudo apt-get update
+sudo apt-get install ros-kinetic-desktop-full
+	sudo rosdep init
+	rosdep update
+	echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+	source ~/.bashrc
+	echo "in a new terminal try: roscore"
+	echo "in case of error try:"
+	echo "rosdep update (without sudo!)"
+	echo "sudo rosdep fix-permissions"
+    else
+        echo "nothing installed or updated etc."
+fi
+
 
 echo " "
 echo "@install qt creator plugin for ROS?"
