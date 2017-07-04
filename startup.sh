@@ -198,7 +198,8 @@ if [ "$ANSWER" == "y" ]
     then
 	sudo add-apt-repository ppa:levi-armstrong/qt-libraries-xenial  
 sudo add-apt-repository ppa:levi-armstrong/ppa  
-sudo apt-get update && sudo apt-get install qt57creator-plugin-ros
+sudo apt-get update 
+sudo apt-get install qt57creator-plugin-ros
     else
         echo "nothing installed or updated etc."
 fi
@@ -299,4 +300,51 @@ if [ "$ANSWER" == "y" ]
 	sudo apt-get install filezilla 
 	filezilla
 fi
+
+echo " "
+echo "@configure brightness of lenovo z500"
+echo "@info Instructions see here: https://askubuntu.com/questions/769006/brightness-key-not-working-ubuntu-16-04-lts "
+echo "@info: do the following: "
+echo "sudo vim /etc/default/grub  "
+echo "sudo update-grub"
+echo "sudo reboot"
+
+echo " "
+echo "@install skype? "
+echo "@info Instructions see here: https://www.skype.com/en/download-skype/skype-for-linux/downloading/?type=weblinux-deb"
+
+echo " "
+echo "@install nvidia settings? nvidia-375 "
+echo "@info  nvidia-settings "
+echo "Do this? (y/n); type y for yes, n for no"
+read ANSWER
+if [ "$ANSWER" == "y" ]
+    then
+        sudo apt-get install nvidia-375 nvidia-settings
+        nvidia-settings
+fi
+
+echo " "
+echo "@install pdfsam "
+echo "@info  a program to nicely work with pdf files."
+echo "Do this? (y/n); type y for yes, n for no"
+read ANSWER
+if [ "$ANSWER" == "y" ]
+    then
+    sudo apt-get install pdfsam
+    pdfsam
+fi
+
+ echo " "
+ echo "@install xclip "
+ echo "@info  a program to get your ssh key. (Nice to have when working with githup)"
+ echo "@info instructions on how to use it: https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/"
+ echo "Do this? (y/n); type y for yes, n for no"
+ read ANSWER
+ if [ "$ANSWER" == "y" ]
+     then
+     sudo apt-get install xclip
+echo"now get your ssh key:"
+     xclip -sel clip < ~/.ssh/id_rsa.pub
+ fi
 
