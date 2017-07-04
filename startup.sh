@@ -339,12 +339,13 @@ fi
  echo "@install xclip "
  echo "@info  a program to get your ssh key. (Nice to have when working with githup)"
  echo "@info instructions on how to use it: https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/"
- echo "Do this? (y/n); type y for yes, n for no"
+echo "@info: also do this: git remote set-url origin git+ssh://git@github.com/username/reponame.git" 
+echo "Do this? (y/n); type y for yes, n for no"
  read ANSWER
  if [ "$ANSWER" == "y" ]
      then
      sudo apt-get install xclip
 echo"now get your ssh key:"
      xclip -sel clip < ~/.ssh/id_rsa.pub
- fi
+fi
 
