@@ -280,14 +280,50 @@ if [ "$ANSWER" == "y" ]
 fi
 
 echo " "
+echo "@install pdftk"
+echo "@info  merge pdfs"
+echo "Do this? (y/n); type y for yes, n for no"
+read ANSWER
+if [ "$ANSWER" == "y" ]
+    then
+    sudo apt-get install pdftk
+    pdftk
+fi
+
+echo " "
 echo "@install kazam?"
-echo "@info  a programm to capture your screen "
+echo "@info  a programm to capture your screen [capture video]"
 echo "Do this? (y/n); type y for yes, n for no"
 read ANSWER
 if [ "$ANSWER" == "y" ]
     then
 	sudo apt-get install kazam
 	kazam
+fi
+
+echo " "
+echo "@install pitivi?"
+echo "@info  render vidoes"
+echo "Do this? (y/n); type y for yes, n for no"
+read ANSWER
+if [ "$ANSWER" == "y" ]
+    then
+        sudo apt-get install pitivi
+        pitivi
+fi
+
+echo " "
+echo "@install avidemux? [ubuntu 16.04]"
+echo "@info  a programm to configure videos"
+echo "@info http://tipsonubuntu.com/2016/09/18/avidemux-2-6-14-released-install-ubuntu-16-04/"
+echo "Do this? (y/n); type y for yes, n for no"
+read ANSWER
+if [ "$ANSWER" == "y" ]
+    then
+        sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu xenial-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'
+        wget -q -O- http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
+        sudo apt update
+        sudo apt install avidemux2.6-qt
 fi
 
 echo " "
