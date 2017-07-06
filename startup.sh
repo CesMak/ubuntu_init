@@ -35,7 +35,7 @@ if [ "$ANSWER" == "y" ]
 	sudo apt-get install vim
 	sudo apt-get install tree
     else
-        echo "nothing installed or updated etc."
+        echo "nothing installed or updated etc"
 fi
 
 echo " "
