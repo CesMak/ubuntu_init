@@ -396,3 +396,43 @@ if [ "$ANSWER" == "y" ]
     sudo apt-get install knotes
     knotes
 fi
+
+
+echo " "
+echo "@install Master PDF EDITOR "
+echo "Do this? (y/n); type y for yes, n for no"
+read ANSWER
+if [ "$ANSWER" == "y" ]
+    then
+    echo "go to: https://code-industry.net/free-pdf-editor/#get"
+fi
+
+
+echo " "
+echo "@info get Synology Disk Dropbox - Station box "
+echo "Do this? (y/n); type y for yes, n for no"
+read ANSWER
+if [ "$ANSWER" == "y" ]
+    echo "@info download and install via: https://global.download.synology.com/download/Tools/CloudStationDrive/4.2.4-4393/Ubuntu/Installer/x86_64/synology-cloud-station-drive-4393.x86_64.deb
+    "
+fi
+
+echo " "
+echo "@info get Audacity (cutting mp3)"
+echo "Do this? (y/n); type y for yes, n for no"
+read ANSWER
+if [ "$ANSWER" == "y" ]
+   sudo apt-get install audacity
+   audacity
+fi
+
+echo " "
+echo "@info get octave"
+echo "Do this? (y/n); type y for yes, n for no"
+read ANSWER
+if [ "$ANSWER" == "y" ]
+   sudo apt-get install octave
+   sudo apt-get install gnuplot
+   sudo apt-get install octave-doc octave-htmldoc
+   octave
+fi
