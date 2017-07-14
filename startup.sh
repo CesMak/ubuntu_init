@@ -386,15 +386,14 @@ echo"now get your ssh key:"
 fi
 
 echo " "
-echo "@install knotes "
+echo "@install xpad notes "
 echo "@info   a program for desktop notes."
-echo "@usage  a new note: ATL arrow up N."
 echo "Do this? (y/n); type y for yes, n for no"
 read ANSWER
 if [ "$ANSWER" == "y" ]
     then
-    sudo apt-get install knotes
-    knotes
+    sudo apt-get install xpad
+    xpad
 fi
 
 
