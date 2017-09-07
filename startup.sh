@@ -398,7 +398,7 @@ fi
 
 
 echo " "
-echo "@install Master PDF EDITOR "
+echo "@install Master PDF EDITOR"
 echo "Do this? (y/n); type y for yes, n for no"
 read ANSWER
 if [ "$ANSWER" == "y" ]
